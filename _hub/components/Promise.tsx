@@ -14,8 +14,8 @@ const items = [
   },
   {
     Icon: Globe,
-    title: "Premium webdesign",
-    desc: "Mindegyik szervezetnek saját Vercel-deployolt prémium weboldal a saját számaikkal, fájdalompontjaikkal, AI-stratégiájukkal. Letölthető a csomag onnan közvetlenül.",
+    title: "Premium oldal szervezetenként",
+    desc: "Mindegyik szervezetnek saját részletes oldal a saját számaikkal, fájdalompontjaikkal, AI-stratégiájukkal. ZIP letölthető közvetlenül az oldalról.",
   },
 ];
 

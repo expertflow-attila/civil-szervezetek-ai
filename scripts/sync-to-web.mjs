@@ -1,11 +1,12 @@
 #!/usr/bin/env node
 /**
- * Másolja a per-org ZIP fájlokat a hub `_hub/public/downloads/` mappájába,
+ * Per-org ZIP-eket szinkronizálja a hub `_hub/public/downloads/` mappájába,
  * hogy a hub oldal letölthetővé tegye őket.
  *
  * Használat: node scripts/sync-to-web.mjs
  *
- * Futás után deploy előtt: minden szervezet ZIP-je elérhető a hub-on.
+ * Megjegyzés: 2026-05-05-től 1 deploy architektúra (a per-org `web/` mappák
+ * törölve). A script már CSAK a hub `public/downloads/`-ba másol.
  */
 
 import fs from "node:fs";
@@ -36,13 +37,4 @@ for (const slug of orgs) {
   copied++;
 }
 
-// Minden per-org webnek is kell a saját ZIP a /public/downloads-ben
-for (const slug of orgs) {
-  const zipPath = path.join(ROOT, slug, "downloads", `${slug}-ai-csomag.zip`);
-  if (!fs.existsSync(zipPath)) continue;
-  const orgPublic = path.join(ROOT, slug, "web", "public", "downloads");
-  fs.mkdirSync(orgPublic, { recursive: true });
-  fs.copyFileSync(zipPath, path.join(orgPublic, path.basename(zipPath)));
-}
-
-console.log(`✓ ${copied}/${orgs.length} ZIP másolva mind a hub-ra, mind az org webekre.`);
+console.log(`✓ ${copied}/${orgs.length} ZIP szinkronizálva a hub _hub/public/downloads/-ba.`);

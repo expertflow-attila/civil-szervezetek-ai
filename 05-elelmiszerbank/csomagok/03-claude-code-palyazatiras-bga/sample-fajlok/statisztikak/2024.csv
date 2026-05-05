@@ -1,0 +1,28 @@
+metrika,ertek,merteegyseg,forras,megjegyzes
+osszes_mentett_tonna,10685,tonna,SmartFront-2024-eves-export,
+osszes_mentett_ertek,20,milliard_HUF,kalkulacio_tonna_x_atlag_ft_per_kg,kb. 1873 Ft/kg élelmiszer-átlag
+osszes_segitett_ember,243919,fo,partner-szervezet-jelentesek-2024,minden hónap-végi aggregálás
+karitativ_partner_szam,650,db,SmartFront-partneri-tabla-2024-12-31,
+hosszu_tavu_szerzodessel,527,db,SmartFront-szerzodesi-tabla,
+egyszeri_szerzodessel,172,db,SmartFront-egyszeri-szerzodesek,
+aktiv_aruhaz_szam,383,db,partner-aruhaz-listak-2024,
+aruhazlanc_szam,7,db,Tesco/Auchan/Aldi/Metro/Lidl/Penny/KFC,
+aruhazi_mentes_arany,80,szazalek,SmartFront-mentes-tipus-bontas,a maradék 20% gyártói + iskolai menza
+osszes_alkalmazott,24,fo,HR-2024-12-31,
+osszes_aktiv_onkentes,60,fo,onkentes-kartya-rendszer-2024,
+raktar_szam,4,db,raktar-cim-listak,Budapest/Karcag/Alsonemedi/Veszprem
+napi_atlag_kg,29260,kg,kalkulacio_eves_per_365_nap,
+co2_megelozott,27580124,kg,kalkulacio_kg_x_1.46,élelmiszerlánc-átlag
+co2_auto_egyenertek,12015,db,kalkulacio_co2_per_2295,átlagos autó éves károsanyag-kibocsátása
+keszetel_megmentett,400000,adag,vendéglátó-partneri-jelentesek,
+nem_elelmiszer_adomany_ertek,300,millio_HUF,vallalati-adomany-jelentesek,tisztálkodószer + IT-eszköz
+beszamolo_iform_kotelezo,igen,,bíróság-2026-tol,2026-tól iFORM nyomtatvány
+bga_palyazat_ev,1,db,2024-es-bga-elnyert,az "Élelmezésbiztonság" témakörben
+nea_palyazat_ev,2,db,2024-es-nea-elnyert,
+efop_palyazat_ev,1,db,2024-es-efop-elnyert,
+vallalati_csr_szam,5,db,BlackRock/MorganStanley/Tesco/Auchan/SPAR,
+heti_atlag_torlodás_napok,2,db,SmartFront-late-pickup-tabla,Budapest IV-V. ker raktár
+veszpremi_aruhazi_kapcsolat,12,db,partner-listak,vidéki Tesco + Lidl + SPAR
+karcagi_aruhazi_kapcsolat,8,db,partner-listak,
+alsonemedi_aruhazi_kapcsolat,15,db,partner-listak,
+budapesti_aruhazi_kapcsolat,348,db,partner-listak,fő áruházi piacunk

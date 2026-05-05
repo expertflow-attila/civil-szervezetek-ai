@@ -1,0 +1,24 @@
+datum,aruhaz_kod,aruhaz_zona,kategoria,kg,partner_anonim,megjegyzes
+2026-04-01,TSC-BP-001,Budapest III. ker,pekaru,42.5,fovarosi-gyermekellato-A,reggeli felesleg
+2026-04-02,TSC-BP-001,Budapest III. ker,zoldseg-gyumolcs,28.3,fovarosi-gyermekellato-A,
+2026-04-03,TSC-BP-001,Budapest III. ker,pekaru,38.1,fovarosi-gyermekellato-A,
+2026-04-03,TSC-BP-007,Budapest XV. ker,pekaru,156.2,fovarosi-csaladsegito-B,nagy adag aznap
+2026-04-04,TSC-BP-007,Budapest XV. ker,zoldseg-gyumolcs,89.6,fovarosi-csaladsegito-B,
+2026-04-05,TSC-BP-001,Budapest III. ker,konzerv,12.0,fovarosi-gyermekellato-A,
+2026-04-08,TSC-BP-007,Budapest XV. ker,pekaru,142.3,fovarosi-csaladsegito-B,
+2026-04-09,TSC-DE-003,Debrecen,pekaru,67.8,vidéki-iskolai-etkezde-C,
+2026-04-09,TSC-DE-003,Debrecen,zoldseg-gyumolcs,34.2,vidéki-iskolai-etkezde-C,
+2026-04-10,TSC-BP-001,Budapest III. ker,fagyasztott,18.5,fovarosi-gyermekellato-A,
+2026-04-11,TSC-SZGD-002,Szeged,pekaru,52.4,vidéki-csaladsegito-D,
+2026-04-12,TSC-SZGD-002,Szeged,konzerv,24.6,vidéki-csaladsegito-D,
+2026-04-15,TSC-BP-007,Budapest XV. ker,pekaru,178.9,fovarosi-csaladsegito-B,Adományok Hete
+2026-04-15,TSC-DE-003,Debrecen,pekaru,89.4,vidéki-iskolai-etkezde-C,Adományok Hete
+2026-04-16,TSC-BP-001,Budapest III. ker,pekaru,45.0,fovarosi-gyermekellato-A,
+2026-04-17,TSC-BP-007,Budapest XV. ker,zoldseg-gyumolcs,98.2,fovarosi-csaladsegito-B,
+2026-04-19,TSC-DE-003,Debrecen,konzerv,18.2,vidéki-iskolai-etkezde-C,
+2026-04-22,TSC-SZGD-002,Szeged,pekaru,48.7,vidéki-csaladsegito-D,
+2026-04-23,TSC-BP-001,Budapest III. ker,pekaru,40.1,fovarosi-gyermekellato-A,
+2026-04-24,TSC-BP-007,Budapest XV. ker,zoldseg-gyumolcs,76.5,fovarosi-csaladsegito-B,
+2026-04-26,TSC-DE-003,Debrecen,pekaru,71.3,vidéki-iskolai-etkezde-C,
+2026-04-29,TSC-BP-001,Budapest III. ker,pekaru,43.8,fovarosi-gyermekellato-A,
+2026-04-30,TSC-BP-007,Budapest XV. ker,pekaru,151.2,fovarosi-csaladsegito-B,hónap végi felesleg

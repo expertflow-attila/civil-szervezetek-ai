@@ -1,0 +1,10 @@
+{
+  "aruhazlanc": "Lidl",
+  "aruhaz_kod": "LIDL-BP-101",
+  "datum": "2026-04-15",
+  "kg": 67.4,
+  "kategoria": "pekaru",
+  "foto": "/fotos/2026-04-15/lidl-bp-101-pekaru.jpg",
+  "partner_anonim": "fovarosi-gyermekvedelmi-E",
+  "_validalo_hiba": "A `receipt_szam` mező hiányzik (Lidlnél kötelező). ✗ HIBA."
+}

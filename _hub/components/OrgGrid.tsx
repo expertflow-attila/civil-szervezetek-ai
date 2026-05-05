@@ -16,7 +16,7 @@ export function OrgGrid() {
             <em className="accent"> sajátot</em>
           </h2>
           <p className="text-[var(--color-ink-soft)] text-lg leading-relaxed">
-            Mindegyik szervezetnek saját mély-elemzés és prémium weboldal. Kattints rá — saját URL-en megnyílik, letöltheted onnan a csomagot.
+            Mindegyik szervezetnek saját mély-elemzés és prémium oldal. Kattints rá — megnyílik a részletes oldal, letöltheted a csomagot.
           </p>
         </div>
 
@@ -42,9 +42,7 @@ export function OrgGrid() {
                   {items.map((org, i) => (
                     <RevealOnScroll key={org.slug} delay={i * 60}>
                       <Link
-                        href={org.vercelUrl}
-                        target="_blank"
-                        rel="noreferrer"
+                        href={`/${org.slug}`}
                         className="card group block p-6 h-full"
                       >
                         <div className="flex items-start justify-between mb-5">
