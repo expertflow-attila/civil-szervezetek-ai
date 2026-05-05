@@ -219,6 +219,32 @@ export const pageContent: PageContent = {
       "04_claude_nonprofits_jelentkezes.md — pre-filled jelentkezési levél",
       "05_pilot_metrics.md — 12-hetes mérőszám-roadmap (Élelmiszerbank-mintán)",
       "06_napi_munka_terkep.md — napi feladat × AI-asszisztencia (Élelmiszerbank-mintán)",
+      "csomagok/ — 2 kész operatív munkacsomag",
     ],
   },
+  readyPackages: [
+    {
+      number: "01",
+      title: "Jogi anyag-összegző",
+      cloudProduct: "Claude Project",
+      setupTime: "10 perc",
+      firstValueTime: "1 óra",
+      problem:
+        "50-200 oldalas jogi anyag (törvénytervezet, CEDAW, ECPAT) feldolgozása 4-8 óra. AI-vel 1-2 óra: vezetői összefoglaló + sajtó-vázlat + hatás-elemzés.",
+      saving: "75% idő",
+      folderName: "01-jogi-anyag-osszegzo",
+      files: ["README", "lépésről lépésre", "system-prompt", "1 prompt"],
+    },
+    {
+      number: "02",
+      title: "Sajtó-vázlat-generátor",
+      cloudProduct: "Claude Desktop + MCP",
+      setupTime: "10 perc",
+      firstValueTime: "15 perc",
+      problem: "Heti 5-10 sajtó-megkeresés × 2-3 óra/db. AI-vel 30-60 perc / db.",
+      saving: "75% idő",
+      folderName: "02-sajto-vazlat",
+      files: ["README", "lépésről lépésre", "1 prompt"],
+    },
+  ],
 };

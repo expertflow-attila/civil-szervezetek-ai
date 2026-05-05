@@ -41,7 +41,7 @@ export type DailyTask = {
 export type ReadyPackage = {
   number: string;        // "01", "02", ...
   title: string;
-  cloudProduct: "Claude Project" | "Claude Desktop + MCP" | "Claude Code" | "Scheduled Routine" | "Claude.ai web";
+  cloudProduct: "Claude Project" | "Claude Desktop + MCP" | "Claude Code" | "Scheduled Routine" | "Claude.ai web" | "Google NotebookLM";
   setupTime: string;     // pl. "5 perc"
   firstValueTime: string;// pl. "10 perc"
   problem: string;       // 1 mondat: mit old meg

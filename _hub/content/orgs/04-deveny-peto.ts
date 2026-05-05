@@ -258,6 +258,32 @@ export const pageContent: PageContent = {
       "04_claude_nonprofits_jelentkezes.md — pre-filled jelentkezési levél",
       "05_pilot_metrics.md — 12-hetes mérőszám-roadmap (Élelmiszerbank-mintán)",
       "06_napi_munka_terkep.md — napi feladat × AI-asszisztencia (Élelmiszerbank-mintán)",
+      "csomagok/ — 2 kész operatív munkacsomag",
     ],
   },
+  readyPackages: [
+    {
+      number: "01",
+      title: "NEAK eszközigénylés-asszisztens",
+      cloudProduct: "Claude Project",
+      setupTime: "1 óra",
+      firstValueTime: "1.5 óra",
+      problem:
+        "Családonkénti 4 órás NEAK-kérelem indoklással + DSGM-hivatkozással. AI-vel 30 perc 1. verzió.",
+      saving: "88% (4 óra → 30 perc)",
+      folderName: "01-neak-eszkozigenyles",
+      files: ["README", "lépésről lépésre", "system-prompt", "1 prompt"],
+    },
+    {
+      number: "02",
+      title: "EFOP-pályázatírás (Claude Code)",
+      cloudProduct: "Claude Code",
+      setupTime: "15 perc",
+      firstValueTime: "1-2 óra",
+      problem: "12-25 órás EFOP-pályázat. AI-vel 5-10 óra git-verziózott workflow-val.",
+      saving: "60% idő",
+      folderName: "02-palyazatiras-efop",
+      files: ["README", "CLAUDE.md", "lépésről lépésre", "1 prompt"],
+    },
+  ],
 };

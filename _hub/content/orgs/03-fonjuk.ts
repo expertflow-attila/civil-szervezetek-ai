@@ -256,6 +256,21 @@ export const pageContent: PageContent = {
       "04_claude_nonprofits_jelentkezes.md — pre-filled jelentkezési levél",
       "05_pilot_metrics.md — 12-hetes mérőszám-roadmap (Élelmiszerbank-mintán)",
       "06_napi_munka_terkep.md — napi feladat × AI-asszisztencia (Élelmiszerbank-mintán)",
+      "csomagok/ — 1 kész operatív munkacsomag (KRITIKUS GDPR)",
     ],
   },
+  readyPackages: [
+    {
+      number: "01",
+      title: "Krízis-eligazító NotebookLM",
+      cloudProduct: "Google NotebookLM",
+      setupTime: "1-2 nap",
+      firstValueTime: "azonnal",
+      problem:
+        "30 perc keresgélés stresszben — gyermekvédelmi jelzőrendszer, krízisközpontok, anyaotthonok. NotebookLM <30 mp válasz forrással.",
+      saving: "95% reakcióidő",
+      folderName: "01-krizis-eligazito",
+      files: ["README", "lépésről lépésre", "1 prompt", "forrás-lista (sample)"],
+    },
+  ],
 };

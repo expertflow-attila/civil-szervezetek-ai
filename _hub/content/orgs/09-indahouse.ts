@@ -220,6 +220,21 @@ export const pageContent: PageContent = {
       "04_claude_nonprofits_jelentkezes.md — pre-filled jelentkezési levél",
       "05_pilot_metrics.md — 12-hetes mérőszám-roadmap (Élelmiszerbank-mintán)",
       "06_napi_munka_terkep.md — napi feladat × AI-asszisztencia (Élelmiszerbank-mintán)",
+      "csomagok/ — 1 kész operatív munkacsomag",
     ],
   },
+  readyPackages: [
+    {
+      number: "01",
+      title: "Önkéntes-onboarding videó-kurzus",
+      cloudProduct: "Google NotebookLM",
+      setupTime: "1-2 hét (videó-felvételek)",
+      firstValueTime: "azonnal új belépőnél",
+      problem:
+        "8-12 órás Borsod-utazással + helyszíni képzés. AI-NotebookLM otthon: 4-6 óra felkészülés + 1 nap helyszíni gyakorlat.",
+      saving: "50% idő, jobb önkéntes-megtartás",
+      folderName: "01-onkentes-onboarding-kurzus",
+      files: ["README", "lépésről lépésre", "1 prompt (tudásteszt)"],
+    },
+  ],
 };

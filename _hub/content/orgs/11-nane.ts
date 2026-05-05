@@ -222,6 +222,21 @@ export const pageContent: PageContent = {
       "04_claude_nonprofits_jelentkezes.md — pre-filled jelentkezési levél",
       "05_pilot_metrics.md — 12-hetes mérőszám-roadmap (Élelmiszerbank-mintán)",
       "06_napi_munka_terkep.md — napi feladat × AI-asszisztencia (Élelmiszerbank-mintán)",
+      "csomagok/ — 1 kész operatív munkacsomag (KRITIKUS GDPR — DPO-jóváhagyással)",
     ],
   },
+  readyPackages: [
+    {
+      number: "01",
+      title: "Jogi anyag-összegző",
+      cloudProduct: "Claude Project",
+      setupTime: "10 perc (DPO-jóváhagyás után)",
+      firstValueTime: "1 óra",
+      problem:
+        "Reformkezdeményezések 4-8 órás jogi anyag-elemzést igényelnek. AI-vel 1-2 óra: vezetői összefoglaló + reformkezdeményezés-vázlat + sajtó-anyag.",
+      saving: "75% idő",
+      folderName: "01-jogi-anyag-osszegzo",
+      files: ["README", "lépésről lépésre", "1 prompt"],
+    },
+  ],
 };

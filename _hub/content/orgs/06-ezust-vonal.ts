@@ -252,6 +252,21 @@ export const pageContent: PageContent = {
       "04_claude_nonprofits_jelentkezes.md — pre-filled jelentkezési levél (DélUtán-ra szabva ajánlott)",
       "05_pilot_metrics.md — 12-hetes mérőszám-roadmap (Élelmiszerbank-mintán)",
       "06_napi_munka_terkep.md — napi feladat × AI-asszisztencia (Élelmiszerbank-mintán)",
+      "csomagok/ — 1 kész operatív munkacsomag (KRITIKUS GDPR)",
     ],
   },
+  readyPackages: [
+    {
+      number: "01",
+      title: "Hívás-utáni összefoglaló-asszisztens",
+      cloudProduct: "Claude Desktop + MCP",
+      setupTime: "10 perc",
+      firstValueTime: "25 perc",
+      problem:
+        "20-30 perc adminisztrációt csinál stresszhormon-szint mellett a 30-60 perces hívás után. AI 5 perc diktálva → strukturált jegyzet.",
+      saving: "70% idő, mentális kíméltség",
+      folderName: "01-hivas-utani-osszefoglalo",
+      files: ["README", "lépésről lépésre", "1 prompt"],
+    },
+  ],
 };

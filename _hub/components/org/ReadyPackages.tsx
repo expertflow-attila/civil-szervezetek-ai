@@ -1,7 +1,7 @@
 import { SectionHeading } from "@/components/SectionHeading";
 import { RevealOnScroll } from "@/components/RevealOnScroll";
 import type { PageContent, ReadyPackage } from "@/lib/types";
-import { Package, Clock, ArrowRight, Cpu, FolderTree, Calendar, Globe } from "lucide-react";
+import { Package, Clock, ArrowRight, Cpu, FolderTree, Calendar, Globe, BookOpen } from "lucide-react";
 
 const cloudIcon: Record<ReadyPackage["cloudProduct"], typeof Package> = {
   "Claude Project": FolderTree,
@@ -9,6 +9,7 @@ const cloudIcon: Record<ReadyPackage["cloudProduct"], typeof Package> = {
   "Claude Code": Package,
   "Scheduled Routine": Calendar,
   "Claude.ai web": Globe,
+  "Google NotebookLM": BookOpen,
 };
 
 export function ReadyPackages({ content }: { content: PageContent }) {

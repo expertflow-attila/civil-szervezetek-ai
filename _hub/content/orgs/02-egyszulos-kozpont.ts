@@ -263,6 +263,33 @@ export const pageContent: PageContent = {
       "04_claude_nonprofits_jelentkezes.md — pre-filled jelentkezési levél",
       "05_pilot_metrics.md — 12-hetes mérőszám-roadmap (Élelmiszerbank-mintán)",
       "06_napi_munka_terkep.md — napi feladat × AI-asszisztencia (Élelmiszerbank-mintán)",
+      "csomagok/ — 2 kész operatív munkacsomag",
     ],
   },
+  readyPackages: [
+    {
+      number: "01",
+      title: "Mediációs jegyzőkönyv-asszisztens",
+      cloudProduct: "Claude Desktop + MCP",
+      setupTime: "10 perc",
+      firstValueTime: "25 perc",
+      problem:
+        "Mediátor 60-90 perc/ülés a jegyzőkönyvre. 4-6 ülés/hét = 4-6 óra adminisztráció. AI-vel 15-20 perc.",
+      saving: "75% idő",
+      folderName: "01-mediacios-jegyzokonyv",
+      files: ["README", "lépésről lépésre", "system-prompt", "1 prompt"],
+    },
+    {
+      number: "02",
+      title: "20 év archívum-kereső",
+      cloudProduct: "Claude Project",
+      setupTime: "4-6 óra (Drive-szervezés)",
+      firstValueTime: "1 perc/keresés",
+      problem:
+        "20+ év Drive-tartalom kereshetetlen. AI-vel <1 perc forrás-hivatkozással.",
+      saving: "90% keresési idő",
+      folderName: "02-archivum-kereso",
+      files: ["README", "lépésről lépésre", "system-prompt", "1 prompt"],
+    },
+  ],
 };

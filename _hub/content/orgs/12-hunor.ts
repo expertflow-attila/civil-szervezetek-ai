@@ -227,6 +227,32 @@ export const pageContent: PageContent = {
       "04_claude_nonprofits_jelentkezes.md — pre-filled jelentkezési levél (MMSZ-re szabva)",
       "05_pilot_metrics.md — 12-hetes mérőszám-roadmap (Élelmiszerbank-mintán)",
       "06_napi_munka_terkep.md — napi feladat × AI-asszisztencia (Élelmiszerbank-mintán)",
+      "csomagok/ — 2 kész operatív munkacsomag",
     ],
   },
+  readyPackages: [
+    {
+      number: "01",
+      title: "Bevetés-utáni AAR jelentés",
+      cloudProduct: "Claude Desktop + MCP",
+      setupTime: "10 perc",
+      firstValueTime: "25 perc",
+      problem:
+        "1-3 óra/bevetés stresszhormon-szint mellett. 5 perc diktálva → strukturált AAR-jelentés 15-30 perc alatt.",
+      saving: "80% idő, mentális kíméltség",
+      folderName: "01-aar-jelentes",
+      files: ["README", "lépésről lépésre", "1 prompt"],
+    },
+    {
+      number: "02",
+      title: "Új önkéntes onboarding videó-kurzus",
+      cloudProduct: "Google NotebookLM",
+      setupTime: "1-2 hét (videó-felvételek)",
+      firstValueTime: "azonnal új belépőnél",
+      problem: "40-80 órás kötelező képzés. AI-NotebookLM-mel 20-40 óra otthoni + 1 nap helyszíni gyakorlat.",
+      saving: "50% idő",
+      folderName: "02-onkentes-onboarding-kurzus",
+      files: ["README", "1 prompt (tudásteszt)"],
+    },
+  ],
 };

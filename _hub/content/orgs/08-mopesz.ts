@@ -221,6 +221,21 @@ export const pageContent: PageContent = {
       "04_claude_nonprofits_jelentkezes.md — pre-filled jelentkezési levél (KORE-ra szabva)",
       "05_pilot_metrics.md — 12-hetes mérőszám-roadmap (Élelmiszerbank-mintán)",
       "06_napi_munka_terkep.md — napi feladat × AI-asszisztencia (Élelmiszerbank-mintán)",
+      "csomagok/ — 1 kész operatív munkacsomag",
     ],
   },
+  readyPackages: [
+    {
+      number: "01",
+      title: "PIC-protokoll fordító (orvosi → szülői)",
+      cloudProduct: "Claude Desktop + MCP",
+      setupTime: "10 perc",
+      firstValueTime: "30 perc",
+      problem:
+        "Kórházi PIC-protokoll szülői magyar nyelvre fordítása 2-3 óra. AI-vel 20-30 perc, érthető, empatikus szülői szöveg.",
+      saving: "85% idő",
+      folderName: "01-pic-protokoll-fordito",
+      files: ["README", "lépésről lépésre", "1 prompt"],
+    },
+  ],
 };
