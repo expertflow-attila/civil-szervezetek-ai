@@ -1,0 +1,94 @@
+{
+  "_README": "Magyar Elelmiszerbank Egyesulet — Claude Desktop config a kozponti AI munkagephez. Mac: ~/Library/Application Support/Claude/claude_desktop_config.json | Windows: %APPDATA%/Claude/claude_desktop_config.json. A {{...}} placeholdereket cserelje ki.",
+
+  "_lepesek": [
+    "1. Claude Desktop letoltes: https://claude.ai/download",
+    "2. Bejelentkezes Claude for Nonprofits / Pro / Team fiokba",
+    "3. Node.js 20+ telepitese: https://nodejs.org",
+    "4. Ezt a fajlt masolja a fenti helyre, nevezze at claude_desktop_config.json-re",
+    "5. {{felhasznalonev}} placeholdert cserelje a Mac/Windows username-re",
+    "6. Hozzon letre egy 'Elelmiszerbank' mappat a Documents-ban a megadott alkonyvtarakkal",
+    "7. Claude Desktop ujraindit",
+    "8. Settings → Developer → MCP Servers tab-on lasd a 3 aktiv MCP-t"
+  ],
+
+  "_szervezet_specifikus_mappak": [
+    "~/Documents/Elelmiszerbank/donor_jelentesek/",
+    "~/Documents/Elelmiszerbank/smartfront_exports_anonim/",
+    "~/Documents/Elelmiszerbank/sablonok/",
+    "~/Documents/Elelmiszerbank/palyazatok_korabbi_nyertes/",
+    "~/Documents/Elelmiszerbank/onkentesek_anonim/",
+    "~/Documents/Elelmiszerbank/aruhaz_szerzodesek/"
+  ],
+
+  "mcpServers": {
+    "filesystem": {
+      "_megjegyzes": "Hivatalos Anthropic Filesystem MCP. CSAK az Elelmiszerbank-specifikus mappakat erje el — soha NEM a teljes home konyvtarat.",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "/Users/{{felhasznalonev}}/Documents/Elelmiszerbank/donor_jelentesek",
+        "/Users/{{felhasznalonev}}/Documents/Elelmiszerbank/smartfront_exports_anonim",
+        "/Users/{{felhasznalonev}}/Documents/Elelmiszerbank/sablonok",
+        "/Users/{{felhasznalonev}}/Documents/Elelmiszerbank/palyazatok_korabbi_nyertes",
+        "/Users/{{felhasznalonev}}/Documents/Elelmiszerbank/onkentesek_anonim",
+        "/Users/{{felhasznalonev}}/Documents/Elelmiszerbank/aruhaz_szerzodesek"
+      ]
+    },
+
+    "google-drive": {
+      "_megjegyzes": "Hivatalos Anthropic Google Drive MCP. Csak az Elelmiszerbank szervezeti Drive-javal kell osszekotni — NEM egyeni Drive-fiokkal. Cseh Balazsnak vagy Nagygyorgy Andrasnak engedelye kell.",
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-gdrive"],
+      "env": {
+        "GDRIVE_CREDENTIALS_PATH": "/Users/{{felhasznalonev}}/.config/claude/elelmiszerbank-gdrive.json"
+      }
+    },
+
+    "gmail": {
+      "_megjegyzes": "Csak partner-koordinacios labelhez kell hozzaferest adni (pl. 'partnerek_2026/'). NEM a teljes postaladahoz. Auto-send=false KOTELEZO.",
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-gmail"],
+      "env": {
+        "GMAIL_CREDENTIALS_PATH": "/Users/{{felhasznalonev}}/.config/claude/elelmiszerbank-gmail.json",
+        "GMAIL_AUTO_SEND": "false"
+      }
+    },
+
+    "_KIVALASZTHATO_TOVABBI_MCP_K": {
+      "_megjegyzes": "Az alabbiak opcionalisak — csak akkor add hozza, ha tenyleg kell.",
+
+      "memory": {
+        "_megjegyzes": "Anthropic Memory MCP — szervezeti specifikumokat (pl. 'Cseh Balazs az elnok', 'Karcag a 4. raktar') megjegyzi.",
+        "command": "npx",
+        "args": ["-y", "@modelcontextprotocol/server-memory"]
+      },
+
+      "fetch": {
+        "_megjegyzes": "Web fetch MCP — palyazat-felhivasok, NEBIH-koziratok, EU-keretrendszerek olvasasahoz.",
+        "command": "npx",
+        "args": ["-y", "@modelcontextprotocol/server-fetch"]
+      }
+    }
+  },
+
+  "_BIZTONSAGI_FIGYELMEZTETESEK": [
+    "1. SOHA ne add a Filesystem MCP-hez a teljes home konyvtarat. Csak az 'Elelmiszerbank/' alkonyvtarat.",
+    "2. SmartFront export-okat ANONIMIZALD a feltoltes elott (partner-konkret nev → 'fovarosi gyermekellato partner').",
+    "3. Donor-adat NEM keveredhet raszolo-csaladok adataival egy Claude Project-ben — ket kulonalo project.",
+    "4. SOHA ne futtass auto-send-et Gmail-en. Minden valasz vazlat marad.",
+    "5. Mac-en kapcsold be a FileVault-ot, Windows-on a BitLocker-t a kozponti AI munkagepen.",
+    "6. Claude Pro/Team eseten kapcsold be a Settings → Privacy → 'Do not use my data for training' opciot.",
+    "7. Audit log: Claude Team csomagban benne van. Bajdik Janos havi 1x atnezi.",
+    "8. NEBIH-koziratok / FELIR-igazolasok eredeti pdf-jet titkositott kulso lemezen tarolod, NEM a Drive-on."
+  ],
+
+  "_FIRST_RUN_TESZT": {
+    "_megjegyzes": "Miutan a Claude Desktop ujraindult, futtasd ezeket:",
+    "1_filesystem_teszt": "Listazd ki, milyen fajlok vannak a sablonok/ mappaban.",
+    "2_gdrive_teszt": "Keress a Drive-on a 'palyazat 2024' kulcsszora es listazd a 3 legrelevansabb fajlt.",
+    "3_gmail_teszt": "Mutasd az utolso 5 partnerek_2026/ olvasatlan email-jet — csak osszefoglalas, ne nyiss meg semmit.",
+    "4_kombinalt_teszt": "Olvasd el a sablonok/Tesco_havi_riport.docx fajlt es a smartfront_exports_anonim/ legujabb havi export-jat. Keszits 1 oldalas Tesco-riport vazlatot."
+  }
+}

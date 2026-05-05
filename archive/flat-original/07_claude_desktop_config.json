@@ -1,0 +1,95 @@
+{
+  "_README": "Ez a Claude Desktop config a központi 'AI munkagéphez'. Helye Mac-en: ~/Library/Application Support/Claude/claude_desktop_config.json | Windows-on: %APPDATA%\\Claude\\claude_desktop_config.json. A '_megjegyzes' mezok kommentek, a Claude Desktop figyelmen kivul hagyja oket. Az osszes {{...}} placeholder-t cserelje ki a valos ertekekre, majd inditsa ujra a Claude Desktop-ot.",
+
+  "_lepesek": [
+    "1. Claude Desktop letoltese: https://claude.ai/download (Mac vagy Windows)",
+    "2. Bejelentkezes Claude Pro/Team vagy Claude for Nonprofits fiokba",
+    "3. Node.js 20+ telepitese: https://nodejs.org (Filesystem MCP-hez kell)",
+    "4. Ezt a fajlt masold a fenti helyre, neveld at claude_desktop_config.json-re",
+    "5. Cserelj le minden {{...}} placeholder-t",
+    "6. Claude Desktop ujraindit",
+    "7. Settings → Developer → MCP Servers tab-on lasd melyik MCP elerheto"
+  ],
+
+  "mcpServers": {
+    "filesystem": {
+      "_megjegyzes": "Hivatalos Anthropic Filesystem MCP. Hozzaferest ad a megadott mappakhoz. CSAK biztonsagos, anonimizalt mappakat add hozza! Soha ne add hozza a teljes home konyvtarat.",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "/Users/{{felhasznalonev}}/CivilSzervezet/palyazatok",
+        "/Users/{{felhasznalonev}}/CivilSzervezet/beszamolok",
+        "/Users/{{felhasznalonev}}/CivilSzervezet/jegyzokonyvek_anonim",
+        "/Users/{{felhasznalonev}}/CivilSzervezet/sablonok",
+        "/Users/{{felhasznalonev}}/CivilSzervezet/helyi_jelentes_q1"
+      ]
+    },
+
+    "google-drive": {
+      "_megjegyzes": "Hivatalos Anthropic Google Drive MCP. Eloszor be kell jelentkezni Google fiokba. Csak megosztott Drive mappakhoz add hozza, ahol nincs egyeni ugyfeladat. Ha az MCP nem mukodik, a Claude Desktop kozvetlen Google Drive integraciojat hasznald (Settings → Connectors).",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-gdrive"
+      ],
+      "env": {
+        "GDRIVE_CREDENTIALS_PATH": "/Users/{{felhasznalonev}}/.config/claude/gdrive-credentials.json"
+      }
+    },
+
+    "gmail": {
+      "_megjegyzes": "Kozossegi Gmail MCP (Anthropic-nak nincs hivatalos sajatja meg). Csak akkor add hozza, ha kifejezetten email-triage-re hasznalod. Soha NE allitsd be auto-kuldesre — minden email vazlat marad, ember hagyja jova. Alternativa: Claude Desktop Settings → Connectors → Gmail (hivatalos integracio, fizetos Pro/Team szukseges)",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-gmail"
+      ],
+      "env": {
+        "GMAIL_CREDENTIALS_PATH": "/Users/{{felhasznalonev}}/.config/claude/gmail-credentials.json",
+        "GMAIL_AUTO_SEND": "false"
+      }
+    },
+
+    "_KIVALASZTHATO_TOVABBI_MCP_K": {
+      "_megjegyzes": "Az alabbiak opcionalisak — csak akkor add hozza, ha tenyleg kell.",
+
+      "memory": {
+        "_megjegyzes": "Anthropic Memory MCP — a Claude megjegyzi a szervezeti specifikumokat session-ok kozott. Hasznos hosszu tavu projektnel.",
+        "command": "npx",
+        "args": ["-y", "@modelcontextprotocol/server-memory"]
+      },
+
+      "fetch": {
+        "_megjegyzes": "Web fetch MCP — ha a Claude-nak weboldalakat kell olvasnia (palyazat felhivas online verzioja, hatosagi tajekoztatok).",
+        "command": "npx",
+        "args": ["-y", "@modelcontextprotocol/server-fetch"]
+      },
+
+      "sqlite": {
+        "_megjegyzes": "Ha tagi adatbazist SQLite-ban tartod (pl. Fonjuk Egymas Halojanal anonimizalt mentor-tabla).",
+        "command": "npx",
+        "args": ["-y", "@modelcontextprotocol/server-sqlite", "/Users/{{felhasznalonev}}/CivilSzervezet/db/mentorok.db"]
+      }
+    }
+  },
+
+  "_BIZTONSAGI_FIGYELMEZTETESEK": [
+    "1. SOHA ne add a Filesystem MCP-hez a teljes home konyvtarat (~ vagy /). Csak konkret, anonim mappakat.",
+    "2. SOHA ne tedd a Gmail credential fajlt verziokezelo alatt vagy felho-szinkronizalt mappaba.",
+    "3. SOHA ne futtass auto-send beallitast Gmail-en. Minden email vazlat marad.",
+    "4. Mac-en kapcsold be a FileVault-ot, Windows-on a BitLocker-t.",
+    "5. Krizisanya/erzekeny ugyfel adatok: SOHA ne menjenek Google Drive-ra. Csak helyi titkositott merevlemezre.",
+    "6. Claude Pro/Team eseten kapcsold be a Settings → Privacy → 'Do not use my data for training' opciot.",
+    "7. Audit log: Claude Team csomag tartalmaz audit log-ot. Havi 1x atnezeni.",
+    "8. Tobb stab tag eseten KULON Mac/Windows user account-ot hasznaljanak — ne kozos jelszoval ugyanazt a profilt."
+  ],
+
+  "_FIRST_RUN_TESZT": {
+    "_megjegyzes": "Miutan a Claude Desktop ujraindult, futtasd ezeket a teszt-promptokat hogy lasd minden mukodik:",
+    "1_filesystem_teszt": "Listazd ki, milyen fajlok vannak a sablonok mappaban.",
+    "2_gdrive_teszt": "Keress a Drive-on a 'beszamolo 2024' kulcsszora es listazd a 3 legrelevansabb fajlt.",
+    "3_gmail_teszt": "Mutasd az utolso 5 olvasatlan emailt a postaladambol — csak osszefoglalast, ne nyiss meg semmit.",
+    "4_kombinalt_teszt": "Olvasd el a sablonok/palyazat_BGA_2024.docx fajlt es a Drive-on talalhato 'BGA-2025-felhivas.pdf' alapjan keszits 1 oldalas vazlatot."
+  }
+}
