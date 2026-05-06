@@ -13,13 +13,13 @@ export function HubHero() {
         </div>
 
         <h1 className="display text-[length:var(--text-display)] mb-10 max-w-6xl leading-[1.0]">
-          AI segít a magyar
+          Magyar civil szervezetek
           <br />
-          <em className="accent">civil szervezeteknek</em>
+          <em className="accent">AI-támogatása</em>
         </h1>
 
         <p className="text-[var(--color-ink-soft)] text-xl leading-relaxed max-w-3xl mb-12">
-          12 szervezet kulcsrakész AI-bevezetési csomagja. Vezetői összefoglaló, 14+ operatív prompt magyarul, Claude Desktop konfig, 12-hetes mérőszám-roadmap, és prémium weboldal — mindegyik letölthető Claude Code-dal vagy VS Code-ban. <em className="accent">Holnap reggel kezdhető.</em>
+          12 szervezet kulcsrakész AI-bevezetési csomagja. Vezetői összefoglaló, 14+ operatív prompt magyarul, Claude Desktop konfig, 12-hetes mérőszám-roadmap, és prémium weboldal — mindegyik letölthető Claude Code-dal vagy VS Code-ban.
         </p>
 
         <div className="flex flex-wrap gap-4 mb-20">
