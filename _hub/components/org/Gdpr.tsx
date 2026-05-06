@@ -15,7 +15,7 @@ export function Gdpr({ content }: { content: PageContent }) {
   return (
     <section className="section" id="gdpr">
       <div className="container-wide">
-        <SectionHeading eyebrow="GDPR + etikai keret" title="Mit nem szabad" accent="elcsesszünk" />
+        <SectionHeading eyebrow="GDPR + etikai keret" title="Adatkezelési" accent="szabályok" />
 
         <div className="card p-8">
           <div className="flex items-start gap-5 mb-7">
